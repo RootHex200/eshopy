@@ -17,6 +17,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  carousel_nullsafety:
+    dependency: "direct main"
+    description:
+      name: carousel_nullsafety
+      sha256: f1c4a6dce00da87b1ab466e04db4351073f39891d7d5714cd2a53d62fc3eff4a
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.1"
   characters:
     dependency: transitive
     description:
