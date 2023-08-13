@@ -2,6 +2,7 @@
 
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
 import 'package:eshopy/src/core/utils/colors/app_colors.dart';
+import 'package:eshopy/src/feature/categories/presentation/pages/categories_page.dart';
 import 'package:eshopy/src/feature/product/home/presentation/pages/search_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -81,12 +82,17 @@ class Homepage extends StatelessWidget {
                 children: [
                   const Text("Category",style: TextStyle(color: Appcolor.contentmain,fontSize: 27,fontWeight: FontWeight.bold),),
                   Expanded(child: Container()),
-                  const Row(
-                    children: [
-                      Text("See More",style: TextStyle(color: Appcolor.black,fontSize: 18),),
-                      HorizontalSpace(width: 8),
-                      Icon(Icons.arrow_forward_ios,size: 15,color: Appcolor.black,)
-                    ],
+                  InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const Categoriespage()));
+                    },
+                    child: const Row(
+                      children: [
+                        Text("See More",style: TextStyle(color: Appcolor.black,fontSize: 18),),
+                        HorizontalSpace(width: 8),
+                        Icon(Icons.arrow_forward_ios,size: 15,color: Appcolor.black,)
+                      ],
+                    ),
                   )
                 ],
                        ),
