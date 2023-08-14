@@ -2,9 +2,9 @@
 
 import 'package:eshopy/src/core/utils/colors/app_colors.dart';
 import 'package:eshopy/src/feature/cart/presentation/pages/cart_page.dart';
+import 'package:eshopy/src/feature/product/favourite/presentation/pages/favourite_page.dart';
 import 'package:eshopy/src/feature/product/home/presentation/pages/home_page.dart';
 import 'package:eshopy/src/feature/setting/presentation/pages/setting_page.dart';
-import 'package:eshopy/src/main/presentation/fav.dart';
 import 'package:eshopy/src/main/presentation/provider/bottom_nav_provider.dart';
 import 'package:eshopy/src/main/presentation/user.dart';
 import 'package:flutter/cupertino.dart';
@@ -13,7 +13,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 List pages=[
   const Homepage(),
-  const Fav(),
+  const Favouritepage(),
   const Cartpage(),
   const User(),
   const Settingpage()

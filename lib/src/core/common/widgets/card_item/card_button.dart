@@ -1,32 +1,28 @@
-import 'package:eshopy/src/core/utils/colors/app_colors.dart';
+
 import 'package:flutter/material.dart';
 
 class CardButton extends StatelessWidget {
-  final Color? iconcolor;
   final Color bodercolor;
-  final IconData icondata;
-
+  final Color? bgcolor;
+  final Icon icon;
   const CardButton(
       {super.key,
-      this.iconcolor,
+      required this.icon,
       required this.bodercolor,
-      required this.icondata});
+      required this.bgcolor,});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Appcolor.balckOpacity.withOpacity(0.1),
+        color: bgcolor,
         border: Border.all(color: bodercolor, width: 1.5),
         borderRadius: const BorderRadius.all(Radius.circular(6.0)),
       ),
       height: 40,
       width: 40,
       child: Center(
-        child:  Icon(
-              icondata,
-              color: iconcolor,
-            ),
+        child: icon,
       ),
     );
   }
