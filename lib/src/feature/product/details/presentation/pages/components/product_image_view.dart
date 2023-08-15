@@ -1,5 +1,5 @@
 
-import 'package:eshopy/src/core/utils/colors/app_colors.dart';
+import 'package:eshopy/src/core/values/app_colors.dart';
 import 'package:eshopy/src/feature/product/details/presentation/pages/components/carousel_slider.dart';
 import 'package:flutter/material.dart';
 

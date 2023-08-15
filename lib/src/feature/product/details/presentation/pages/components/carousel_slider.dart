@@ -1,6 +1,6 @@
 
 import 'package:carousel_nullsafety/carousel_nullsafety.dart';
-import 'package:eshopy/src/core/utils/colors/app_colors.dart';
+import 'package:eshopy/src/core/values/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CarouselSlider extends StatelessWidget {

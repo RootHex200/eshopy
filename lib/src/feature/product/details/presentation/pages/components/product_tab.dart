@@ -1,7 +1,7 @@
 
 
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
-import 'package:eshopy/src/core/utils/colors/app_colors.dart';
+import 'package:eshopy/src/core/values/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class Producttab extends StatelessWidget {

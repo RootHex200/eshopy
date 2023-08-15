@@ -2,7 +2,7 @@
 
 import 'package:eshopy/src/core/common/widgets/card_item/model/card_item_model.dart';
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
-import 'package:eshopy/src/core/utils/colors/app_colors.dart';
+import 'package:eshopy/src/core/values/app_colors.dart';
 import 'package:eshopy/src/core/common/widgets/card_item/card_button.dart';
 import 'package:eshopy/src/feature/product/details/presentation/pages/details_page.dart';
 import 'package:flutter/material.dart';

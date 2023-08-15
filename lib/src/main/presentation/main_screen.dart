@@ -1,6 +1,6 @@
 
 
-import 'package:eshopy/src/core/utils/colors/app_colors.dart';
+import 'package:eshopy/src/core/values/app_colors.dart';
 import 'package:eshopy/src/feature/cart/presentation/pages/cart_page.dart';
 import 'package:eshopy/src/feature/product/favourite/presentation/pages/favourite_page.dart';
 import 'package:eshopy/src/feature/product/home/presentation/pages/home_page.dart';
