@@ -1,5 +1,6 @@
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
+import 'package:eshopy/src/core/values/app_icon.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -73,10 +74,7 @@ class Subcategorypage extends StatelessWidget {
                         onPressed: () {
                           Navigator.pop(context);
                         },
-                        icon: const Icon(
-                          Icons.arrow_back,
-                          size: 32,
-                        )),
+                        icon: Appicon.arrowBack),
                     const HorizontalSpace(width: 20),
                     const Text(
                       'Clothes & shoes',
@@ -141,11 +139,7 @@ class Subcategorypage extends StatelessWidget {
                                                         .contentsecond)),
                                             IconButton(
                                                 onPressed: () {},
-                                                icon: const Icon(
-                                                  CupertinoIcons.forward,
-                                                  size: 25,
-                                                  color: Appcolor.contentmain,
-                                                )),
+                                                icon: Appicon.forward),
                                           ],
                                         ),
                                         const VerticalSpace(height: 5),

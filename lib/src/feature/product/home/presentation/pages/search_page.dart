@@ -1,5 +1,6 @@
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
+import 'package:eshopy/src/core/values/app_icon.dart';
 import 'package:eshopy/src/feature/product/details/presentation/pages/details_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -29,11 +30,7 @@ class _SearchpageState extends State<Searchpage> {
                   children: [
                     //arrow
                     IconButton(
-                      icon: const Icon(
-                        Icons.arrow_back,
-                        size: 32,
-                        color: Appcolor.contentmain,
-                      ),
+                      icon: Appicon.arrowBack,
                       onPressed: () {
                         Navigator.pop(context);
                       },
@@ -58,10 +55,7 @@ class _SearchpageState extends State<Searchpage> {
                             });
                           }
                         },
-                        prefixIcon: const Icon(
-                          Icons.search,
-                          size: 30,
-                        ),
+                        prefixIcon: Appicon.search,
                         decoration: BoxDecoration(
                           color: Appcolor.grey.withOpacity(0.1),
                           borderRadius:
@@ -72,13 +66,8 @@ class _SearchpageState extends State<Searchpage> {
                     const HorizontalSpace(width: 10),
                     IconButton(
                         onPressed: () {},
-                        icon: Icon(
-                          visible
-                              ? Icons.filter_alt_outlined
-                              : CupertinoIcons.mic,
-                          size: 32,
-                          color: Appcolor.contentmain,
-                        ))
+                        icon: visible?Appicon.filter:Appicon.mic
+                        )
                   ],
                 ),
               ),
@@ -162,7 +151,7 @@ class _SearchpageState extends State<Searchpage> {
                     padding: EdgeInsets.only(left: 20),
                     child: Row(
                       children: [
-                        Icon(Icons.history,size: 26,color: Appcolor.contentmain,),
+                        Appicon.history,
                         HorizontalSpace(width: 10),
                         Text("Rodeo Coat Cavenment newsets",style: TextStyle(color: Appcolor.contentmain,fontSize: 15),)
                       ],
@@ -269,11 +258,7 @@ class _SearchpageState extends State<Searchpage> {
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
                                                 children: [
-                                                  Icon(
-                                                    Icons.star,
-                                                    color: Appcolor.white,
-                                                    size: 20,
-                                                  ),
+                                                  Appicon.whiteStar,
                                                   HorizontalSpace(width: 5),
                                                   Text(
                                                     "4.5",

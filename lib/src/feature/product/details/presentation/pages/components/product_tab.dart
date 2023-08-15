@@ -2,6 +2,7 @@
 
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
+import 'package:eshopy/src/core/values/app_icon.dart';
 import 'package:flutter/material.dart';
 
 class Producttab extends StatelessWidget {
@@ -36,7 +37,7 @@ class Producttab extends StatelessWidget {
 
        Row(
       children: [
-        const Icon(Icons.star,color: Appcolor.yellowStar,size: 20,),
+        Appicon.yellowStar,
         const HorizontalSpace(width: 5),
         RichText(text: const TextSpan(children: [
           TextSpan(text: "4.5",style: TextStyle(color: Appcolor.contentmain,fontSize: 14,fontWeight: FontWeight.bold)),

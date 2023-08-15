@@ -1,6 +1,7 @@
 
 
 import 'package:eshopy/src/core/values/app_colors.dart';
+import 'package:eshopy/src/core/values/app_icon.dart';
 import 'package:eshopy/src/feature/cart/presentation/pages/cart_page.dart';
 import 'package:eshopy/src/feature/product/favourite/presentation/pages/favourite_page.dart';
 import 'package:eshopy/src/feature/product/home/presentation/pages/home_page.dart';
@@ -42,11 +43,11 @@ class MainScreen extends StatelessWidget {
             ref.read(bottomNavProvider.notifier).state=value;
           },
           items:const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.favorite_outline), label: 'Favorite'),
-          BottomNavigationBarItem(icon: Icon(CupertinoIcons.shopping_cart), label: 'Cart'),
-          BottomNavigationBarItem(icon: Icon(CupertinoIcons.person), label: 'person'),
-          BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Setting'),
+          BottomNavigationBarItem(icon: Appicon.home, label: 'Home'),
+          BottomNavigationBarItem(icon: Appicon.favorite, label: 'Favorite'),
+          BottomNavigationBarItem(icon: Appicon.shoppingcart, label: 'Cart'),
+          BottomNavigationBarItem(icon: Appicon.person, label: 'person'),
+          BottomNavigationBarItem(icon: Appicon.setting, label: 'Setting'),
         ]);
         }
       ),

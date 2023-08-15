@@ -2,6 +2,7 @@
 
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
+import 'package:eshopy/src/core/values/app_icon.dart';
 import 'package:eshopy/src/feature/setting/data/data_sources/setting_option_data_source.dart';
 import 'package:eshopy/src/feature/setting/data/model/setting_option_mode.dart';
 import 'package:flutter/material.dart';
@@ -79,10 +80,7 @@ class Settingpage extends StatelessWidget {
                           const HorizontalSpace(
                             width: 10,
                           ),
-                          const Icon(
-                            Icons.arrow_forward_ios,
-                            color: Appcolor.contentmain,
-                          ),
+                          Appicon.arrowForward,
                         ],
                       ),
                     ),

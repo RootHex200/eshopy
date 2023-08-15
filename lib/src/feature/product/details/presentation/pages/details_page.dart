@@ -1,6 +1,7 @@
 
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
+import 'package:eshopy/src/core/values/app_icon.dart';
 import 'package:eshopy/src/feature/cart/presentation/pages/cart_page.dart';
 import 'package:eshopy/src/feature/product/details/presentation/pages/components/product_image_view.dart';
 import 'package:eshopy/src/feature/product/details/presentation/pages/components/product_tab.dart';
@@ -38,11 +39,7 @@ class _DetailspageState extends State<Detailspage> with SingleTickerProviderStat
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       IconButton(
-                        icon: const Icon(
-                          Icons.arrow_back,
-                          size: 32,
-                          color: Appcolor.contentmain,
-                        ),
+                        icon: Appicon.arrowBack,
                         onPressed: () {
                           Navigator.pop(context);
                         },
@@ -61,7 +58,7 @@ class _DetailspageState extends State<Detailspage> with SingleTickerProviderStat
                             contentPadding: const EdgeInsets.symmetric(vertical: 10),
                             hintText: "Search .......",
                             hintStyle: const TextStyle(color: Appcolor.grey,fontSize: 18),
-                            prefixIcon: const Icon(Icons.search,size: 30,),
+                            prefixIcon: Appicon.search,
                             fillColor: Appcolor.grey.withOpacity(0.1),
                             filled: true,
                             border: OutlineInputBorder(
@@ -74,7 +71,7 @@ class _DetailspageState extends State<Detailspage> with SingleTickerProviderStat
                       ),
                       const HorizontalSpace(width: 10),
                       IconButton(
-                        icon: const Icon(Icons.shopping_cart,size: 32,),
+                        icon: Appicon.shoppingcart,
                         onPressed: () {
                           Navigator.push(context, MaterialPageRoute(builder: (context)=>const Cartpage()));
                         },
@@ -147,9 +144,9 @@ class _DetailspageState extends State<Detailspage> with SingleTickerProviderStat
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                                             const HorizontalSpace(width: 6),
-                    IconButton(onPressed: (){}, icon: const Icon(Icons.share_outlined,size: 32,)),
+                    IconButton(onPressed: (){}, icon: Appicon.share),
                    
-                    IconButton(onPressed: (){}, icon: const Icon(Icons.favorite_outline,size: 32,)),
+                    IconButton(onPressed: (){}, icon: Appicon.favorite),
                     
                       ],
                     )),

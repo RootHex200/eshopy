@@ -2,6 +2,7 @@ import 'package:eshopy/src/core/common/widgets/card_item/card_items.dart';
 import 'package:eshopy/src/core/common/widgets/card_item/model/card_item_model.dart';
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
+import 'package:eshopy/src/core/values/app_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -25,11 +26,7 @@ class Cartpage extends StatelessWidget {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       IconButton(
-                        icon: const Icon(
-                          Icons.arrow_back,
-                          size: 32,
-                          color: Appcolor.contentmain,
-                        ),
+                        icon: Appicon.arrowBack,
                         onPressed: () {
                           Navigator.pop(context);
                         },

@@ -4,6 +4,7 @@ import 'package:eshopy/src/core/common/widgets/card_item/model/card_item_model.d
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
 import 'package:eshopy/src/core/common/widgets/card_item/card_button.dart';
+import 'package:eshopy/src/core/values/app_icon.dart';
 import 'package:eshopy/src/feature/product/details/presentation/pages/details_page.dart';
 import 'package:flutter/material.dart';
 
@@ -98,14 +99,14 @@ class CardItems extends StatelessWidget {
                                   addCart==null? InkWell(
                                     onTap: increment as void Function()?,
                                     child: CardButton(
-                                      icon: const Icon(Icons.add,color: Appcolor.black),
+                                      icon: Appicon.add,
                                       bgcolor: Appcolor.balckOpacity.withOpacity(0.1),
                                       bodercolor: Appcolor.balckOpacity,
                                     ),
                                   ): InkWell(
                                     onTap: addCart as void Function()?,
                                     child: const CardButton(
-                                      icon: Icon(Icons.add_shopping_cart,color: Appcolor.white),
+                                      icon: Appicon.shoppingcart,
                                       bgcolor: Appcolor.primaryColor,
                                       bodercolor: Appcolor.primaryColor,
                                     ),
@@ -120,7 +121,7 @@ class CardItems extends StatelessWidget {
                                   addCart==null?InkWell(
                                     onTap: decrement as void Function()?,
                                     child:  CardButton(
-                                      icon: const Icon(Icons.remove,color: Appcolor.black),
+                                      icon: Appicon.remove,
                                       bgcolor: Appcolor.balckOpacity.withOpacity(0.1),
                                       bodercolor: Appcolor.balckOpacity,
                                     ),
@@ -128,7 +129,7 @@ class CardItems extends StatelessWidget {
                                   GestureDetector(
                                     onTap: delete as void Function()?,
                                     child:  CardButton(
-                                      icon: const Icon(Icons.delete,color: Appcolor.primaryColor),
+                                      icon: Appicon.delete,
                                       bgcolor: Appcolor.balckOpacity.withOpacity(0.1),
                                       bodercolor: Appcolor.primaryColor,
                                     ),

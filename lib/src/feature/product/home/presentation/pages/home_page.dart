@@ -2,6 +2,7 @@
 
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
+import 'package:eshopy/src/core/values/app_icon.dart';
 import 'package:eshopy/src/feature/categories/presentation/pages/categories_page.dart';
 import 'package:eshopy/src/feature/product/home/presentation/pages/search_page.dart';
 import 'package:flutter/cupertino.dart';
@@ -41,7 +42,7 @@ class Homepage extends StatelessWidget {
                           contentPadding: const EdgeInsets.symmetric(vertical: 10),
                           hintText: "Search .......",
                           hintStyle: const TextStyle(color: Appcolor.grey,fontSize: 18),
-                          prefixIcon: const Icon(Icons.search,size: 30,),
+                          prefixIcon: Appicon.search,
                           fillColor: Appcolor.grey.withOpacity(0.1),
                           filled: true,
                           border: OutlineInputBorder(
@@ -54,11 +55,11 @@ class Homepage extends StatelessWidget {
                     ),
                     const HorizontalSpace(width: 13),
                     IconButton(                  
-                      icon: const Icon(CupertinoIcons.conversation_bubble,size: 30,),
+                      icon: Appicon.conversationbubble,
                       onPressed: () {},
                     ),
                     IconButton(
-                      icon: const Icon(Icons.notifications_none_outlined,size: 30,),
+                      icon: Appicon.notification,
                       onPressed: () {},
                     ),
                   ],
@@ -90,7 +91,7 @@ class Homepage extends StatelessWidget {
                       children: [
                         Text("See More",style: TextStyle(color: Appcolor.black,fontSize: 18),),
                         HorizontalSpace(width: 8),
-                        Icon(Icons.arrow_forward_ios,size: 15,color: Appcolor.black,)
+                        Appicon.arrowForward
                       ],
                     ),
                   )
@@ -145,7 +146,7 @@ class Homepage extends StatelessWidget {
                     children: [
                       Text("See More",style: TextStyle(color: Appcolor.black,fontSize: 18),),
                       HorizontalSpace(width: 8),
-                      Icon(Icons.arrow_forward_ios,size: 15,color: Appcolor.black,)
+                      Appicon.arrowForward
                     ],
                   )
                 ],
