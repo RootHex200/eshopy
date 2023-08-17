@@ -5,7 +5,6 @@ import 'package:eshopy/src/core/values/app_colors.dart';
 import 'package:eshopy/src/core/values/app_icon.dart';
 import 'package:eshopy/src/feature/categories/presentation/pages/categories_page.dart';
 import 'package:eshopy/src/feature/product/home/presentation/pages/search_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatelessWidget {

@@ -1,7 +1,6 @@
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
 import 'package:eshopy/src/core/values/app_icon.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 //temp data

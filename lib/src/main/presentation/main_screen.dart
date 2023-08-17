@@ -8,7 +8,6 @@ import 'package:eshopy/src/feature/product/home/presentation/pages/home_page.dar
 import 'package:eshopy/src/feature/setting/presentation/pages/setting_page.dart';
 import 'package:eshopy/src/main/presentation/provider/bottom_nav_provider.dart';
 import 'package:eshopy/src/main/presentation/user.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

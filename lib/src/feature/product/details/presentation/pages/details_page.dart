@@ -1,4 +1,5 @@
 
+import 'package:eshopy/src/core/common/widgets/button_widget.dart';
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
 import 'package:eshopy/src/core/values/app_icon.dart';
@@ -152,15 +153,8 @@ class _DetailspageState extends State<Detailspage> with SingleTickerProviderStat
                     )),
                     Expanded(
                       flex: 2,
-                      child: Container(
-                      padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 8),
-                      decoration: BoxDecoration(
-                        color: Appcolor.contentmain,
-                        borderRadius: BorderRadius.circular(10)
-             
-                      ),
-                      child: const Center(child: Text("Add to Bag",style: TextStyle(color: Appcolor.white,fontWeight: FontWeight.bold,fontSize: 24),)),
-                    ))
+                      child: Buttonwidget(text: "Add to Bag",width: MediaQuery.of(context).size.width-100,color: Appcolor.contentmain,textcolor: Appcolor.white,)
+                    )
                   ],
                 ),
               ),

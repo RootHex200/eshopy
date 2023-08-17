@@ -48,7 +48,7 @@ class Appicon {
     size: 20,
   );
   static const Icon shoppingcart = Icon(
-    Icons.shopping_cart,
+    Icons.shopping_cart_outlined,
     size: 32,
   );
   static const Icon share = Icon(
@@ -69,10 +69,49 @@ class Appicon {
     size: 25,
     color: Appcolor.contentmain,
   );
-  static const Icon add=Icon(Icons.add,color: Appcolor.black);
-  static const Icon remove=Icon(Icons.remove,color: Appcolor.black);
-  static const Icon delete=Icon(Icons.delete,color: Appcolor.primaryColor);
-  static const Icon home=Icon(Icons.home);
-  static const Icon person=Icon(CupertinoIcons.person);
-  static const Icon setting=Icon(Icons.settings);
+  static const Icon add = Icon(Icons.add, color: Appcolor.black);
+  static const Icon remove = Icon(Icons.remove, color: Appcolor.black);
+  static const Icon delete = Icon(Icons.delete, color: Appcolor.primaryColor);
+  static const Icon home = Icon(
+    Icons.home,
+    size: 32,
+  );
+  static const Icon person = Icon(
+    CupertinoIcons.person,
+    size: 32,
+  );
+  static const Icon setting = Icon(
+    Icons.settings,
+    size: 32,
+  );
+  static const Icon email = Icon(
+    Icons.email_outlined,
+    size: 32,
+  );
+  static const Icon password = Icon(
+    Icons.lock_outline,
+    size: 32,
+  );
+  static const Icon passwrodVisible = Icon(
+    Icons.lock_rounded,
+    weight: 1,
+  );
+  static const Icon passwordInvisible = Icon(Icons.lock_open_rounded);
+  static const Icon date = Icon(
+    Icons.calendar_today_outlined,
+    size: 32,
+  );
+  static const Icon back = Icon(
+    CupertinoIcons.back,
+    size: 32,
+    color: Appcolor.primaryColor,
+  );
+  static const Icon arrowdown = Icon(
+    CupertinoIcons.chevron_down,
+    size: 30,
+  );
+  static const Icon location = Icon(
+    Icons.location_on_outlined,
+    size: 20,
+  );
 }
