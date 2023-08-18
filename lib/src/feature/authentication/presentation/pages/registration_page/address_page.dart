@@ -1,6 +1,5 @@
+import 'package:eshopy/src/core/common/widgets/address_text_fields_widget.dart';
 import 'package:eshopy/src/core/common/widgets/button_widget.dart';
-import 'package:eshopy/src/core/common/widgets/custom_drop_down.dart';
-import 'package:eshopy/src/core/common/widgets/custom_text_field.dart';
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
 import 'package:eshopy/src/core/values/app_icon.dart';
@@ -19,13 +18,9 @@ class _AddresspageState extends State<Addresspage> {
   late TextEditingController apartemetcontroller;
   late TextEditingController zipcontroller;
 
-  String? selectedCountry; // Initialize with an empty value
-  String? selectedState;
-  String? selectedCity;
-  List<String> countries = ['USA', 'Canada', 'UK', 'Australia'];
-  List<String> states = ['State A', 'State B', 'State C'];
-  List<String> cities = ['City X', 'City Y', 'City Z'];
-  bool obscureText = true;
+  // String? selectedCountry; // Initialize with an empty value
+  // String? selectedState;
+  // String? selectedCity;
   @override
   void initState() {
     addresscontroller = TextEditingController();
@@ -52,7 +47,6 @@ class _AddresspageState extends State<Addresspage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                //
                 const Text(
                   "Hello Nantapix!",
                   style: TextStyle(
@@ -67,47 +61,11 @@ class _AddresspageState extends State<Addresspage> {
                   style: TextStyle(fontSize: 18, color: Appcolor.contentsecond),
                 ),
                 const VerticalSpace(height: 40),
-                CustomTextField(
-                  hintText: "Address",
-                  controller: addresscontroller,
-                ),
-                const VerticalSpace(height: 20),
-                CustomTextField(
-                  hintText: "Apartment, Suite, etc",
-                  controller: apartemetcontroller,
-                ),
-                const VerticalSpace(height: 20),
-                // CustomTextField(
-                //   hintText: "Country / region",
-                //   controller: countrycontroller,
-                // ),
-                Customdropdown(
-                    selectedValue: selectedCountry,
-                    onChanged: (value) {},
-                    items: const ['USA', 'Canada', 'UK', 'Australia'],
-                    hintText: "Country / region"),
-                const VerticalSpace(height: 20),
-                Customdropdown(
-                    selectedValue: selectedCountry,
-                    onChanged: (value) {},
-                    items: const ['State A', 'State B', 'State C'],
-                    hintText: "state / province"),
-                // CustomTextField(
-                //   hintText: "state / province",
-                //   controller: statecontroller,
-                // ),
-                const VerticalSpace(height: 20),
-                Customdropdown(
-                    selectedValue: selectedCountry,
-                    onChanged: (value) {},
-                    items: const ['State A', 'State B', 'State C'],
-                    hintText: "City"),
-                const VerticalSpace(height: 20),
-                CustomTextField(
-                  hintText: "zip / postal code (optional)",
-                  controller: zipcontroller,
-                ),
-                const VerticalSpace(height: 70),
+                Addresstextfieldswidget(
+                    addresscontroller: addresscontroller,
+                    apartemetcontroller: apartemetcontroller,
+                    zipcontroller: zipcontroller),
+                        const VerticalSpace(height: 70),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 5),
                   child: Row(
@@ -124,8 +82,11 @@ class _AddresspageState extends State<Addresspage> {
                       ),
                       const HorizontalSpace(width: 20),
                       InkWell(
-                        onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const Passwordpage()));
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Passwordpage()));
                         },
                         child: Buttonwidget(
                           color: Appcolor.primaryColor,
@@ -137,7 +98,6 @@ class _AddresspageState extends State<Addresspage> {
                     ],
                   ),
                 ),
-                const VerticalSpace(height: 20),
               ],
             ),
           ),

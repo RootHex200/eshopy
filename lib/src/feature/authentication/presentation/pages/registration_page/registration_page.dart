@@ -1,5 +1,5 @@
 import 'package:eshopy/src/core/common/widgets/button_widget.dart';
-import 'package:eshopy/src/core/common/widgets/custom_text_field.dart';
+import 'package:eshopy/src/core/common/widgets/introduce_text_fields_widget.dart';
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
 import 'package:eshopy/src/core/values/app_icon.dart';
@@ -44,7 +44,6 @@ class _RegistrationpageState extends State<Registrationpage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                //
                 const Text(
                   "Hello",
                   style: TextStyle(
@@ -58,44 +57,10 @@ class _RegistrationpageState extends State<Registrationpage> {
                   style: TextStyle(color: Appcolor.contentsecond, fontSize: 18),
                 ),
                 const VerticalSpace(height: 50),
-                Row(
-                  children: [
-                    const Center(child: Appicon.person),
-                    const HorizontalSpace(width: 20),
-                    Expanded(
-                        child: CustomTextField(
-                      hintText: "Your full name",
-                      keyboardType: TextInputType.emailAddress,
-                      controller: namecontroller,
-                    ))
-                  ],
-                ),
-                const VerticalSpace(height: 20),
-                Row(
-                  children: [
-                    const Center(child: Appicon.date),
-                    const HorizontalSpace(width: 20),
-                    Expanded(
-                        child: CustomTextField(
-                      hintText: "Date of Birth",
-                      keyboardType: TextInputType.emailAddress,
-                      controller: dateofbirthcontroller,
-                    ))
-                  ],
-                ),
-                const VerticalSpace(height: 20),
-                Row(
-                  children: [
-                    const Center(child: Appicon.email),
-                    const HorizontalSpace(width: 20),
-                    Expanded(
-                        child: CustomTextField(
-                      hintText: "Email",
-                      keyboardType: TextInputType.emailAddress,
-                      controller: emailcontroller,
-                    ))
-                  ],
-                ),
+                Introducetextfieldswidget(
+                    namecontroller: namecontroller,
+                    dateofbirthcontroller: dateofbirthcontroller,
+                    emailcontroller: emailcontroller),
                 const VerticalSpace(height: 70),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 5),

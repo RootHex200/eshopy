@@ -10,6 +10,7 @@ class CustomTextField extends StatelessWidget {
     required this.controller,
     this.obscureText = false,
     this.suffixIcon,
+    this.initialValue
   });
 
   final String hintText;
@@ -18,6 +19,7 @@ class CustomTextField extends StatelessWidget {
   final Function(String)? onChanged;
   final bool obscureText;
   final Widget? suffixIcon;
+  final String? initialValue;
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +27,7 @@ class CustomTextField extends StatelessWidget {
       controller: controller,
       onChanged: onChanged,
       obscureText: obscureText,
+      initialValue: initialValue,
       cursorColor: Appcolor.primaryColor,
       decoration: InputDecoration(
         suffixIcon: suffixIcon,
