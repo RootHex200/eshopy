@@ -5,7 +5,6 @@ import 'package:eshopy/src/core/common/widgets/space_widget.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
 import 'package:eshopy/src/core/common/widgets/card_item/card_button.dart';
 import 'package:eshopy/src/core/values/app_icon.dart';
-import 'package:eshopy/src/feature/product/details/presentation/pages/details_page.dart';
 import 'package:flutter/material.dart';
 
 class CardItems extends StatelessWidget {
@@ -14,7 +13,7 @@ class CardItems extends StatelessWidget {
   final Function? delete;
   final Function? addCart;
   final List<CardItemModel>? data;
-  
+  final Function? onTap;
   const CardItems({
     super.key,
     this.increment,
@@ -22,6 +21,8 @@ class CardItems extends StatelessWidget {
     this.delete,
     this.addCart,
     required this.data,
+    this.onTap,
+
   });
 
   @override
@@ -33,11 +34,7 @@ class CardItems extends StatelessWidget {
       itemCount: data!.length,
       itemBuilder: (context, index) {
         return InkWell(
-          onTap: (){
-            if(addCart!=null){
-               Navigator.push(context, MaterialPageRoute(builder: (context)=>const Detailspage()));
-            }
-          },
+          onTap:onTap as void Function()?,
           child: Container(
               margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
               height: 150,

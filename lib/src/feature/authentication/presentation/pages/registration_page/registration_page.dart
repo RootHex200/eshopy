@@ -1,8 +1,7 @@
-import 'package:eshopy/src/core/common/widgets/button_widget.dart';
 import 'package:eshopy/src/core/common/widgets/introduce_text_fields_widget.dart';
+import 'package:eshopy/src/core/common/widgets/next_button_part_widget.dart';
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
-import 'package:eshopy/src/core/values/app_icon.dart';
 import 'package:eshopy/src/feature/authentication/presentation/pages/registration_page/address_page.dart';
 import 'package:flutter/material.dart';
 
@@ -57,44 +56,12 @@ class _RegistrationpageState extends State<Registrationpage> {
                   style: TextStyle(color: Appcolor.contentsecond, fontSize: 18),
                 ),
                 const VerticalSpace(height: 50),
-                Introducetextfieldswidget(
+                PersonalInfotextfieldswidget(
                     namecontroller: namecontroller,
                     dateofbirthcontroller: dateofbirthcontroller,
                     emailcontroller: emailcontroller),
                 const VerticalSpace(height: 70),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 5),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                        child: const Buttonwidget(
-                          width: 60,
-                          icon: Appicon.back,
-                          bordercolor: Appcolor.primaryColor,
-                        ),
-                      ),
-                      const HorizontalSpace(width: 20),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const Addresspage()));
-                        },
-                        child: Buttonwidget(
-                          color: Appcolor.primaryColor,
-                          width: MediaQuery.of(context).size.width - 160,
-                          textcolor: Appcolor.white,
-                          text: 'Next',
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                const Nextbuttonpartwidget(navigationTO: Addresspage())
               ],
             ),
           ),

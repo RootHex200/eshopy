@@ -8,6 +8,8 @@ class Buttonwidget extends StatelessWidget {
   final Color? textcolor;
   final double? width;
   final Icon? icon;
+  final double? fontSize;
+  final double? radius;
   const Buttonwidget(
       {super.key,
       this.color,
@@ -15,7 +17,10 @@ class Buttonwidget extends StatelessWidget {
       this.textcolor,
       this.icon,
       this.text,
-      this.bordercolor});
+      this.bordercolor,
+      this.fontSize=24,
+      this.radius=10
+      });
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +29,7 @@ class Buttonwidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 8),
       decoration: BoxDecoration(
           color: color,
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(radius!),
           border: Border.all(
               color: bordercolor ?? Appcolor.blacktransparent, width: 2)),
       child: Center(
@@ -32,7 +37,9 @@ class Buttonwidget extends StatelessWidget {
               ? icon
               : Text(
                   text!,
-                  style: TextStyle(color: textcolor, fontSize: 24),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(color: textcolor, fontSize: fontSize),
                 )),
     );
   }

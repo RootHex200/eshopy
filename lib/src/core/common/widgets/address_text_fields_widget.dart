@@ -4,8 +4,8 @@ import 'package:eshopy/src/core/common/widgets/custom_text_field.dart';
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
 import 'package:flutter/material.dart';
 
-class Addresstextfieldswidget extends StatelessWidget {
-  const Addresstextfieldswidget({
+class AddressInfotextfieldswidget extends StatelessWidget {
+  const AddressInfotextfieldswidget({
     super.key,
     required this.addresscontroller,
     required this.apartemetcontroller,

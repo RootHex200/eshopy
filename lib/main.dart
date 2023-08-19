@@ -21,6 +21,12 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Appcolor.appbg
       ),
       home: const MainScreen(),
+            builder: (context, child) {
+        return MediaQuery(
+          data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+          child: child!,
+        );
+      },
     );
   }
 }

@@ -114,4 +114,18 @@ class Appicon {
     Icons.location_on_outlined,
     size: 20,
   );
+  static const Icon currency=Icon(Icons.currency_exchange,color: Appcolor.contentmain,);
+  static const Icon language=Icon(Icons.language,color: Appcolor.contentmain,);
+  static const Icon privacy=Icon(Icons.privacy_tip_outlined,color: Appcolor.contentmain,);
+  static const Icon terms=Icon(Icons.collections,color: Appcolor.contentmain,);
+  static const Icon about=Icon(CupertinoIcons.info,color: Appcolor.contentmain,);
+  static const Icon shop=Icon(Icons.shop,color: Appcolor.contentmain,);
+  static const Icon logout=Icon(Icons.logout,color: Appcolor.contentmain,);
+  static const Icon customerSupport=Icon(Icons.support_agent,color: Appcolor.contentmain,);
+  static const Icon inviteFriend=Icon(Icons.person_add_alt_1_outlined,color: Appcolor.contentmain,);
+  static const Icon completeOrder=Icon(Icons.check_circle_outline,color: Appcolor.contentmain,);
+  static const Icon myOrder=Icon(Icons.privacy_tip_outlined,color: Appcolor.contentmain,);
+  static const Icon changePassword=Icon(Icons.lock_outline,color: Appcolor.contentmain,);
+  static const Icon rateapplication=Icon(Icons.star_outline,color: Appcolor.contentmain,);
+  static const Icon phone=Icon(Icons.phone,color: Appcolor.contentmain,size: 30,);
 }

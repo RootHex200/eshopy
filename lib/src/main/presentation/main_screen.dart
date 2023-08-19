@@ -2,12 +2,12 @@
 
 import 'package:eshopy/src/core/values/app_colors.dart';
 import 'package:eshopy/src/core/values/app_icon.dart';
+import 'package:eshopy/src/feature/authentication/presentation/pages/login_page/login_page.dart';
 import 'package:eshopy/src/feature/cart/presentation/pages/cart_page.dart';
 import 'package:eshopy/src/feature/product/favourite/presentation/pages/favourite_page.dart';
 import 'package:eshopy/src/feature/product/home/presentation/pages/home_page.dart';
 import 'package:eshopy/src/feature/setting/presentation/pages/setting_page.dart';
 import 'package:eshopy/src/main/presentation/provider/bottom_nav_provider.dart';
-import 'package:eshopy/src/main/presentation/user.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -15,7 +15,7 @@ List pages=[
   const Homepage(),
   const Favouritepage(),
   const Cartpage(),
-  const User(),
+  const Loginpage(),
   const Settingpage()
 ];
 class MainScreen extends StatelessWidget {

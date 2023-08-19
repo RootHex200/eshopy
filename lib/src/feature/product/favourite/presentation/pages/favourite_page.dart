@@ -3,6 +3,7 @@ import 'package:eshopy/src/core/common/widgets/card_item/model/card_item_model.d
 import 'package:eshopy/src/core/values/app_colors.dart';
 import 'package:eshopy/src/core/values/app_icon.dart';
 import 'package:eshopy/src/feature/cart/presentation/pages/cart_page.dart';
+import 'package:eshopy/src/feature/product/details/presentation/pages/details_page.dart';
 import 'package:flutter/material.dart';
 
 class Favouritepage extends StatelessWidget {
@@ -51,6 +52,9 @@ class Favouritepage extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const Cartpage()));
               },
               delete: () {},
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>const Detailspage()));
+              },
               data: [
                 //generate cart model item
                 CardItemModel(
