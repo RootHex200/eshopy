@@ -1,3 +1,4 @@
+import 'package:eshopy/src/core/common/widgets/app_bar_widget.dart';
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
 import 'package:eshopy/src/core/values/app_icon.dart';
@@ -64,28 +65,8 @@ class Subcategorypage extends StatelessWidget {
           children: [
             Container(
               color: Appcolor.white,
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-                child: Row(
-                  children: [
-                    IconButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        icon: Appicon.arrowBack),
-                    const HorizontalSpace(width: 20),
-                    const Text(
-                      'Clothes & shoes',
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                        color: Appcolor.contentmain,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              padding: const EdgeInsets.only(left: 20),
+              child: const Appbarwidget(title: "Clothes & shoes")
             ),
             const VerticalSpace(height: 10),
             Expanded(

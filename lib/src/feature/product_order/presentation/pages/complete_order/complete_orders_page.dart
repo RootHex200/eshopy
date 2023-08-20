@@ -1,7 +1,7 @@
-import 'package:eshopy/src/core/common/widgets/product_orders_widget.dart';
+import 'package:eshopy/src/core/common/widgets/app_bar_widget.dart';
+import 'package:eshopy/src/core/common/widgets/product_order_items_widget.dart';
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
-import 'package:eshopy/src/core/values/app_icon.dart';
 import 'package:flutter/material.dart';
 
 class Completeorderspage extends StatelessWidget {
@@ -11,31 +11,10 @@ class Completeorderspage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+      padding: const EdgeInsets.only(left: 20,right: 20,top: 20),
       child: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 15),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                IconButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    icon: Appicon.arrowBack),
-                const HorizontalSpace(width: 20),
-                const Text(
-                  'Completed Orders',
-                  style: TextStyle(
-                    fontSize: 27,
-                    fontWeight: FontWeight.bold,
-                    color: Appcolor.contentmain,
-                  ),
-                ),
-              ],
-            ),
-          ),
+          const Appbarwidget(title: "Completed Orders"),
           const VerticalSpace(height: 20),
           Expanded(
             child: Container(
@@ -43,7 +22,7 @@ class Completeorderspage extends StatelessWidget {
                 color: Appcolor.white,
                 borderRadius: BorderRadius.circular(15),
               ),
-              child: const Productorderswidget(),
+              child: const Productorderitemswidget(),
             ),
           )
         ],

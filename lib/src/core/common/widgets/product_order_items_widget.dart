@@ -4,8 +4,8 @@ import 'package:eshopy/src/core/common/widgets/space_widget.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
 import 'package:flutter/material.dart';
 
-class Productorderswidget extends StatelessWidget {
-  const Productorderswidget({
+class Productorderitemswidget extends StatelessWidget {
+  const Productorderitemswidget({
     super.key,
   });
   
@@ -71,36 +71,35 @@ class Productorderswidget extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Row(
-                          mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                          children: [
-                            SizedBox(
-                                width: MediaQuery.of(context)
-                                        .size
-                                        .width -
-                                    200,
-                                child: const Text(
-                                  "Cavement Rodeo Dust coat",
-                                  maxLines: 2,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                      color: Appcolor.contentsecond,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold),
-                                )),
-                            const SizedBox(
-                                width: 70,
-                                child: Text(
-                                  "\$125.6666655",
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                      color: Appcolor.contentsecond,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold),
-                                ))
-                          ],
+                        SizedBox(
+                                                    width:
+                              MediaQuery.of(context).size.width - 130,
+                          child: const Row(
+                            mainAxisAlignment:
+                                MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Cavement Rodeo Dust coat",
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                    color: Appcolor.contentsecond,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(
+                                  width: 70,
+                                  child: Text(
+                                    "\$125.6666655",
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                        color: Appcolor.contentsecond,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold),
+                                  ))
+                            ],
+                          ),
                         ),
                         const VerticalSpace(height: 20),
                         const Text(

@@ -1,8 +1,8 @@
+import 'package:eshopy/src/core/common/widgets/app_bar_widget.dart';
 import 'package:eshopy/src/core/common/widgets/card_item/card_items.dart';
 import 'package:eshopy/src/core/common/widgets/card_item/model/card_item_model.dart';
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
-import 'package:eshopy/src/core/values/app_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -17,36 +17,11 @@ class Cartpage extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Container(
-                color: Appcolor.white,
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      IconButton(
-                        icon: Appicon.arrowBack,
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                      ),
-                      Expanded(child: Container()),
-                      const Align(
-                        alignment: Alignment.center,
-                        child: Text(
-                          "Your Cart",
-                          style: TextStyle(
-                              color: Appcolor.contentmain,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 27),
-                        ),
-                      ),
-                      Expanded(child: Container()),
-                    ],
-                  ),
-                ),
-              ),
+            Container(
+              color: Appcolor.white,
+              padding: const EdgeInsets.only( left: 20),
+              child: const Appbarwidget(title: "Your Cart",bottomnavpage: true,),
+            ),
               Expanded(
                   child: CardItems(
                 increment: () {},

@@ -1,3 +1,4 @@
+import 'package:eshopy/src/core/common/widgets/app_bar_widget.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
 import 'package:eshopy/src/feature/categories/presentation/pages/sub_category_page.dart';
 import 'package:flutter/material.dart';
@@ -24,16 +25,8 @@ class Categoriespage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 25, vertical: 30),
-              child: Text(
-                'Categories',
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  color: Appcolor.contentmain,
-                ),
-              ),
-            ),
+              padding: EdgeInsets.only(left: 20),
+              child: Appbarwidget(title: "Categories")),
             Expanded(
               child: ListView.builder(
                   itemCount: categoriesImage.length,

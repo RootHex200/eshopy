@@ -1,3 +1,4 @@
+import 'package:eshopy/src/core/common/widgets/app_bar_widget.dart';
 import 'package:eshopy/src/core/common/widgets/button_widget.dart';
 import 'package:eshopy/src/core/common/widgets/custom_text_field.dart';
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
@@ -36,24 +37,7 @@ class _ForgetpasswordpageState extends State<Forgetpasswordpage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  children: [
-                    IconButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        icon: Appicon.arrowBack),
-                    const HorizontalSpace(width: 20),
-                    const Text(
-                      'Forget Password',
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                        color: Appcolor.contentmain,
-                      ),
-                    ),
-                  ],
-                ),
+                const Appbarwidget(title: "Forget Password"),
                 const VerticalSpace(height: 100),
                 const Text(
                   "Sorry to hear that",
