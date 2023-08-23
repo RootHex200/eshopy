@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'eshopy',
       theme: ThemeData(
         useMaterial3: true,
+        primaryColor: Appcolor.primaryColor,
         scaffoldBackgroundColor: Appcolor.appbg
       ),
       home: const MainScreen(),

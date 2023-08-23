@@ -14,6 +14,7 @@ class CardItems extends StatelessWidget {
   final Function? addCart;
   final List<CardItemModel>? data;
   final Function? onTap;
+  final bool? checkout;
   const CardItems({
     super.key,
     this.increment,
@@ -22,6 +23,7 @@ class CardItems extends StatelessWidget {
     this.addCart,
     required this.data,
     this.onTap,
+    this.checkout=false,
 
   });
 
@@ -82,15 +84,18 @@ class CardItems extends StatelessWidget {
                                     fontWeight: FontWeight.bold,
                                     color: Appcolor.contentmain,
                                   )),
-                              const VerticalSpace(height: 5),
+                               VerticalSpace(height:checkout==true?30: 5),
                                Text(
-                                data![index].productPrice.toString(),
+                                "৳ ${data![index].productPrice.toString()}",
                                 style:const TextStyle(
                                     color: Appcolor.primaryColor,
                                     fontWeight: FontWeight.bold),
                               ),
-                              const VerticalSpace(height: 5),
-                              Row(
+                              const VerticalSpace(height: 10),
+                          checkout==true?const Align(
+                                alignment: Alignment.centerRight,
+                                
+                            child: Text("1x",style: TextStyle(color: Appcolor.contentmain,fontWeight: FontWeight.bold),)):    Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                                 children: [
                                   addCart==null? InkWell(

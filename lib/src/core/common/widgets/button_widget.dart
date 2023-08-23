@@ -10,6 +10,7 @@ class Buttonwidget extends StatelessWidget {
   final Icon? icon;
   final double? fontSize;
   final double? radius;
+  final FontWeight? fontWeight;
   const Buttonwidget(
       {super.key,
       this.color,
@@ -19,7 +20,8 @@ class Buttonwidget extends StatelessWidget {
       this.text,
       this.bordercolor,
       this.fontSize=24,
-      this.radius=10
+      this.radius=10,
+      this.fontWeight
       });
 
   @override
@@ -39,7 +41,7 @@ class Buttonwidget extends StatelessWidget {
                   text!,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(color: textcolor, fontSize: fontSize),
+                  style: TextStyle(color: textcolor, fontSize: fontSize,fontWeight:fontWeight ),
                 )),
     );
   }

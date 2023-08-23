@@ -1,8 +1,10 @@
 import 'package:eshopy/src/core/common/widgets/app_bar_widget.dart';
+import 'package:eshopy/src/core/common/widgets/button_widget.dart';
 import 'package:eshopy/src/core/common/widgets/card_item/card_items.dart';
 import 'package:eshopy/src/core/common/widgets/card_item/model/card_item_model.dart';
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
+import 'package:eshopy/src/feature/product_order/presentation/pages/add_order/create_order_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -87,21 +89,18 @@ class Cartpage extends StatelessWidget {
               Consumer(
                 builder: (context, ref, child) {
                   return GestureDetector(
-                    onTap: () {},
-                    child: Container(
-                      height: 50,
-                      margin: const EdgeInsets.only(
-                          left: 10, right: 10, bottom: 10),
-                      decoration:
-                          const BoxDecoration(color: Appcolor.primaryColor),
-                      child: const Center(
-                          child: Text(
-                        "Order",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15),
-                      )),
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => const Createorder()));
+                    },
+                    child: Center(
+                      child: Buttonwidget(
+                        text: "Order now",
+                        color: Appcolor.primaryColor,
+                        textcolor: Appcolor.white,
+                        width: MediaQuery.of(context).size.width-20,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   );
                 },
