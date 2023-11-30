@@ -1,6 +1,6 @@
 
 import 'package:eshopy/src/core/values/app_icon.dart';
-import 'package:eshopy/src/core/common/widgets/options_list/model/setting_option_mode.dart';
+import 'package:eshopy/src/core/common/widgets/setting_options/model/setting_option_model.dart';
 import 'package:eshopy/src/feature/product_order/presentation/pages/complete_order/complete_orders_page.dart';
 import 'package:eshopy/src/feature/product_order/presentation/pages/my_order/my_orders_page.dart';
 import 'package:eshopy/src/feature/user_account/presentation/pages/account_option_pages/change_password_page.dart';

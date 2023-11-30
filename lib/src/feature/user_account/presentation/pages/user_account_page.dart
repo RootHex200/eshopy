@@ -1,5 +1,5 @@
 import 'package:eshopy/src/core/common/widgets/button_widget.dart';
-import 'package:eshopy/src/core/common/widgets/options_list/options_list.dart';
+import 'package:eshopy/src/core/common/widgets/setting_options/setting_options_list.dart';
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
 import 'package:eshopy/src/feature/user_account/data/data_sources/user_account_option_data.dart';
@@ -79,7 +79,7 @@ class Useraccountpage extends StatelessWidget {
             borderRadius: BorderRadius.circular(13),
             color: Appcolor.white,
           ),
-          child: Options(
+          child: SettingOptions(
               settingOptiondata:
                   UserAccountoptiondata.getUserAccountOptionsData()),
         )

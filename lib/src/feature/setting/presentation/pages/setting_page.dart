@@ -1,6 +1,6 @@
 
 
-import 'package:eshopy/src/core/common/widgets/options_list/options_list.dart';
+import 'package:eshopy/src/core/common/widgets/setting_options/setting_options_list.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
 import 'package:eshopy/src/feature/setting/data/data_sources/setting_option_data_source.dart';
 import 'package:flutter/material.dart';
@@ -34,7 +34,7 @@ class Settingpage extends StatelessWidget {
               color: Appcolor.white,
               borderRadius: BorderRadius.circular(10),
             ),
-            child: Options(settingOptiondata: SettingOptionDataSource.getSettingOptionsData()),
+            child: SettingOptions(settingOptiondata: SettingOptionDataSource.getSettingOptionsData()),
           )
         ],
       )),

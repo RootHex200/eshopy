@@ -1,7 +1,7 @@
 
 
 
-import 'package:eshopy/src/core/common/widgets/options_list/model/setting_option_mode.dart';
+import 'package:eshopy/src/core/common/widgets/setting_options/model/setting_option_model.dart';
 import 'package:eshopy/src/core/values/app_icon.dart';
 import 'package:eshopy/src/feature/setting/presentation/pages/setting_options_page/about_page.dart';
 import 'package:eshopy/src/feature/setting/presentation/pages/setting_options_page/currency_page.dart';

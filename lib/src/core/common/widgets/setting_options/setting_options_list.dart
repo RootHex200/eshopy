@@ -1,11 +1,11 @@
-import 'package:eshopy/src/core/common/widgets/options_list/model/setting_option_mode.dart';
+import 'package:eshopy/src/core/common/widgets/setting_options/model/setting_option_model.dart';
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
 import 'package:eshopy/src/core/values/app_icon.dart';
 import 'package:flutter/material.dart';
 
-class Options extends StatelessWidget {
-  const Options({
+class SettingOptions extends StatelessWidget {
+  const SettingOptions({
     super.key,
     required this.settingOptiondata,
   });
