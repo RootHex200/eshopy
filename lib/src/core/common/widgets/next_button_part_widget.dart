@@ -9,9 +9,11 @@ import 'package:flutter/material.dart';
 class Nextbuttonpartwidget extends StatelessWidget {
   const Nextbuttonpartwidget({
     super.key,
-    required this.navigationTO,
+    required this.backbuttonClick,
+    required this.nextbuttonClick,
   });
-  final Widget navigationTO;
+  final Function()? nextbuttonClick;
+  final Function()? backbuttonClick;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -20,9 +22,7 @@ class Nextbuttonpartwidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           InkWell(
-            onTap: () {
-              Navigator.pop(context);
-            },
+            onTap:backbuttonClick,
             child: const Buttonwidget(
               width: 60,
               icon: Appicon.back,
@@ -31,12 +31,7 @@ class Nextbuttonpartwidget extends StatelessWidget {
           ),
           const HorizontalSpace(width: 20),
           InkWell(
-            onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => navigationTO));
-            },
+            onTap: nextbuttonClick,
             child: Buttonwidget(
               color: Appcolor.primaryColor,
               width: MediaQuery.of(context).size.width - 160,

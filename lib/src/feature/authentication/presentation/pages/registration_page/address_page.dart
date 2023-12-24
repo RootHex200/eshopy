@@ -61,7 +61,13 @@ class _AddresspageState extends State<Addresspage> {
                     apartemetcontroller: apartemetcontroller,
                     zipcontroller: zipcontroller),
                         const VerticalSpace(height: 70),
-                const Nextbuttonpartwidget(navigationTO: Inputphonenumberpage(),),
+                Nextbuttonpartwidget(
+                  backbuttonClick: (){
+                    Navigator.pop(context);
+                  },
+                  nextbuttonClick: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Inputphonenumberpage()));
+                },),
               ],
             ),
           ),

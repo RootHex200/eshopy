@@ -44,7 +44,13 @@ class _InputphonenumberpageState extends State<Inputphonenumberpage> {
                 onTap: (){}
                 ),
                 const VerticalSpace(height: 100),
-                const Nextbuttonpartwidget(navigationTO: Passwordpage())
+                Nextbuttonpartwidget(
+                  backbuttonClick: (){
+                    Navigator.pop(context);
+                  },
+                  nextbuttonClick: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Passwordpage()));
+                },),
               ],
             ),
           ),

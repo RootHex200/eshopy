@@ -141,7 +141,13 @@ class _PasswordpageState extends State<Passwordpage> {
                   text: 'Sign Up',
                 )),
                 const VerticalSpace(height: 40),
-                const Nextbuttonpartwidget(navigationTO: Loginpage())
+                Nextbuttonpartwidget(
+                  backbuttonClick: (){
+                    Navigator.pop(context);
+                  },
+                  nextbuttonClick: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Loginpage()));
+                },),
               ],
             ),
           ),

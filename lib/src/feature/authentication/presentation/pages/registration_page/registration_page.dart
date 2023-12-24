@@ -61,7 +61,13 @@ class _RegistrationpageState extends State<Registrationpage> {
                     dateofbirthcontroller: dateofbirthcontroller,
                     emailcontroller: emailcontroller),
                 const VerticalSpace(height: 70),
-                const Nextbuttonpartwidget(navigationTO: Addresspage())
+                Nextbuttonpartwidget(
+                  backbuttonClick: (){
+                    Navigator.pop(context);
+                  },
+                  nextbuttonClick: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Addresspage()));
+                },),
               ],
             ),
           ),
