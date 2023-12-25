@@ -1,11 +1,17 @@
+import 'dart:developer';
+
 import 'package:eshopy/src/core/common/widgets/button_widget.dart';
 import 'package:eshopy/src/core/common/widgets/custom_text_field.dart';
 import 'package:eshopy/src/core/common/widgets/next_button_part_widget.dart';
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
+import 'package:eshopy/src/core/state/base_state.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
 import 'package:eshopy/src/core/values/app_icon.dart';
-import 'package:eshopy/src/feature/authentication/presentation/pages/login_page/login_page.dart';
+import 'package:eshopy/src/feature/authentication/data/model/user_registration_model.dart';
+import 'package:eshopy/src/feature/authentication/presentation/provider/auth_notifier_provider.dart';
+import 'package:eshopy/src/feature/authentication/presentation/provider/user_regi_inpute_data_state.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class Passwordpage extends StatefulWidget {
   const Passwordpage({super.key});
@@ -141,13 +147,40 @@ class _PasswordpageState extends State<Passwordpage> {
                   text: 'Sign Up',
                 )),
                 const VerticalSpace(height: 40),
-                Nextbuttonpartwidget(
-                  backbuttonClick: (){
-                    Navigator.pop(context);
+                Consumer(
+                  builder:(_,ref,child) {
+                    final authnotifier=ref.watch(authnotifierProvider);
+                      if(authnotifier is SuccessState){
+                          //write success code
+                          log("success");
+                          
+                          // for clear user regi data state
+                          ref.invalidate(userregidataholdProvider);
+                
+                        }
+                        if(authnotifier is ErrorState){
+                          //write a error code
+                        }
+                    return Nextbuttonpartwidget(
+                    backbuttonClick: (){
+                      Navigator.pop(context);
+                    },
+                    nextbuttonClick: ()async{
+                      if(passwordcontroller.text.isNotEmpty&&confirmpasswordcontroller.text.isNotEmpty){
+                        final _state=ref.read(userregidataholdProvider.state);
+                        _state.state=_state.state.copyWith(password: passwordcontroller.text.toString());
+
+                        final regidata=ref.watch(userregidataholdProvider);
+                        UserRegiData userRegiData=UserRegiData(address: regidata.address,id: 11,fullName: regidata.fullName,phone: regidata.phone,email: regidata.email,password: regidata.password);
+
+                        await ref.read(authnotifierProvider.notifier).userRegistration(userRegiData);
+                      }else{
+                        //show error message of incomplete inpute fi
+                      }
+                    
+                  },);
                   },
-                  nextbuttonClick: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Loginpage()));
-                },),
+                ),
               ],
             ),
           ),

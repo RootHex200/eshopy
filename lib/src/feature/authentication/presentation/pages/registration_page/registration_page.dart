@@ -3,7 +3,9 @@ import 'package:eshopy/src/core/common/widgets/next_button_part_widget.dart';
 import 'package:eshopy/src/core/common/widgets/space_widget.dart';
 import 'package:eshopy/src/core/values/app_colors.dart';
 import 'package:eshopy/src/feature/authentication/presentation/pages/registration_page/address_page.dart';
+import 'package:eshopy/src/feature/authentication/presentation/provider/user_regi_inpute_data_state.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class Registrationpage extends StatefulWidget {
   const Registrationpage({super.key});
@@ -61,13 +63,27 @@ class _RegistrationpageState extends State<Registrationpage> {
                     dateofbirthcontroller: dateofbirthcontroller,
                     emailcontroller: emailcontroller),
                 const VerticalSpace(height: 70),
-                Nextbuttonpartwidget(
-                  backbuttonClick: (){
-                    Navigator.pop(context);
+                Consumer(
+                  builder:(context,ref,child) {
+                    return Nextbuttonpartwidget(
+                    backbuttonClick: (){
+                      Navigator.pop(context);
+                    },
+                    nextbuttonClick: (){
+                      if(namecontroller.text.isNotEmpty&&dateofbirthcontroller.text.isNotEmpty&&emailcontroller.text.isNotEmpty){
+                        final _state=ref.read(userregidataholdProvider.state);
+                        _state.state=_state.state.copyWith(fullName: namecontroller.text.toString(),dateOfBirth: dateofbirthcontroller.text.toString(),email: emailcontroller.text.toString());
+
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const Addresspage()));
+                        print(ref.watch(userregidataholdProvider).fullName);
+
+                      }else{
+                        //show error message of incomplete inpute fi
+                      }
+                    
+                  },);
                   },
-                  nextbuttonClick: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Addresspage()));
-                },),
+                ),
               ],
             ),
           ),
